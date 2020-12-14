@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .from {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      width: 300px;
+      margin-top: 100px;
+    }
+
+    button {
+      width: 100px;
+      margin-top: 50px;
+    }
+
+    .content {
+      margin-top: 100px;
+    }
+
+    .middle {
+      display: flex;
+    }
+
+    .top {
+      margin-left: 50px;
+    }
+
+    .bottom {
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="from">
+    <input placeholder="用户名" type="text">
+    <input placeholder="密码" type="text">
+    <button>发送</button>
+  </div>
+
+
+  <div class="content">
+    <button class="top">上</button>
+    <div class="middle">
+      <button class="left">左</button>
+      <button class="right">右</button>
+    </div>
+
+    <button class="bottom">下</button>
+
+  </div>
+
+
+
+</body>
+<script>
+  const input1 = document.getElementsByTagName("input")[0]
+  const input2 = document.getElementsByTagName("input")[1]
+  const send = document.getElementsByTagName("button")[0]
+  const Top = document.getElementsByTagName("button")[1]
+  const Left = document.getElementsByTagName("button")[2]
+  const Right = document.getElementsByTagName("button")[3]
+  const Bottom = document.getElementsByTagName("button")[4]
+  console.log(input1, input2, send, Top, Left, Right, Bottom)
+
+  input1.addEventListener("click", () => {
+
+  })
+
+  send.addEventListener("click", () => {
+    console.log(input1.value, input2.value)
+    // fetch('http://127.0.0.1:5000/action?user_name=libai&user_age=17', {"data":"213"})
+    fetch('http://127.0.0.1:5000/action?name=libai&passwd=17')
+  })
+
+
+  Top.addEventListener("click", () => {
+    console.log(0)
+    // fetch('http://127.0.0.1:5000/action?user_name=libai&user_age=17', {"data":"213"})
+    fetch('http://127.0.0.1:5000/action?action=0')
+  })
+
+  Left.addEventListener("click", () => {
+    console.log(1)
+    // fetch('http://127.0.0.1:5000/action?user_name=libai&user_age=17', {"data":"213"})
+    fetch('http://127.0.0.1:5000/action?action=1')
+  })
+
+  Right.addEventListener("click", () => {
+    console.log(2)
+    // fetch('http://127.0.0.1:5000/action?user_name=libai&user_age=17', {"data":"213"})
+    fetch('http://127.0.0.1:5000/action?action=2')
+  })
+
+  Bottom.addEventListener("click", () => {
+    console.log(3)
+    // fetch('http://127.0.0.1:5000/action?user_name=libai&user_age=17', {"data":"213"})
+    fetch('http://127.0.0.1:5000/action?action=3')
+  })
+</script>
+
+
+
+</html>
+
+
+

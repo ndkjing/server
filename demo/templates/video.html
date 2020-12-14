@@ -1,0 +1,13 @@
+{#播放萤石云视频#}
+{#首先引入ezuikit.js#}
+{#<script src="/ezuikit.js"></script>#}
+`<script src="https://open.ys7.com/sdk/js/1.4/ezuikit.js"></script>`
+{#页面创建一个video标签 [若设置autoplay属性则默认自动播放]#}
+<video id="myPlayer" poster="https://profile.csdnimg.cn/3/A/C/3_jjjndk1314" controls playsInline webkit-playsinline [autoplay]>
+    <source src="rtmp://rtmp01open.ys7.com/openlive/018be2e247894dc183195cfb1f39937a.hd" type="" />
+</video>
+
+<script>
+    var player = new EZUIPlayer('myPlayer');
+</script>
+
